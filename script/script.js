@@ -12,22 +12,22 @@ const mainFunction = (callback) => {
 
 const callbackExponentiation = (a, b) => {
     const result = a ** b;
-    alert(result);
+    alert(`The result of raising the first number to the power of the second number is ${result}`);
 }
 
 const callbackMultiplication = (a, b) => {
     const result = a * b;
-    alert(result);
+    alert(`The result of multiplying the first and second number is ${result}`);
 }
 
 const callbackDivision = (a, b) => {
     const result = a / b;
-    alert(result);
+    alert(`The result of dividing the first number by the second one is ${result}`);
 }
 
 const callbackModulo = (a, b) => {
     const result = a / b;
-    alert(result);
+    alert(`The remainder after dividing the first number by the second one is ${result}`);
 }
 
 mainFunction(callbackExponentiation);
