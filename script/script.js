@@ -80,44 +80,19 @@ const f2 = () => {
 }
 f2();
 
-// Task#10
+// Task#10 
 
-const arr9 = [[1, 2, 3], [4, 5], [6]];
-const f3 = () => {
-    let sum1 = 0;
-    for (let i = 0; i < arr9.length; i++) {
-        if (Array.isArray(arr9[i])) {
-            for (let j = 0; j < arr9[i].length; j++) {
-                sum1 += arr9[i][j];
-            }
-        } else {
-            sum1 += arr9[i];
-        }
+const arr10 = [[1, 2, 3], [4, 5], [6]];
+let result10 = 0;
+for (let key in arr10) {
+    for (let item in arr10[key]) {
+        result10 += arr10[key][item];
     }
-    return sum1
 }
-f3();
+alert(result10);
 
 // Task#11
 
-const arr10 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
-const f4 = () => {
-    let sum2 = 0;
-    for (let i = 0; i < arr10.length; i++) {
-        if (Array.isArray(arr10[i])) {
-            for (let j = 0; j < arr10[i].length; j++) { 
-                if (Array.isArray(arr10[i][j])) { 
-                    for (let k = 0; k < arr10[i][j].length; k++) {
-                        sum2 += arr10[i][j][k];
-                    }
-                } else {
-                    sum2 += arr10[i][j];
-                }
-            }
-        } else {
-            sum2 += arr10[i];
-        }
-    }
-    return sum2
-}
-f4();
+const arr11 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
+const arrSum = () => arr11.flat(Infinity).reduce((sum, current) => sum + current, 0);
+alert(arrSum());
