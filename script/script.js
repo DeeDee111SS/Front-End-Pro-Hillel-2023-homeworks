@@ -60,7 +60,7 @@ const users = [
 const getRichyPhone = (users) => {
   const getPhone = [];
   const temp = users.map((user) => {
-    if (user.balance.replace(/[$,]/g, '') >= 2000) getPhone.push(user.phone);
+    if (Number(user.balance.replace('$', '').replace(',', '')) >= 2000) getPhone.push(user.phone);
   });
   return getPhone;
 }
