@@ -57,7 +57,7 @@ const users = [
   },
 ];
 
-const getRichyPhone = () => {
+const getRichyPhone = (users) => {
   const getPhone = [];
   const temp = users.map((user) => {
     if (user.balance.replace(/[$,]/g, '') >= 2000) getPhone.push(user.phone);
@@ -65,7 +65,7 @@ const getRichyPhone = () => {
   return getPhone;
 }
 
-const getAllBalances = () => {
+const getAllBalances = (users) => {
   const allBal = users.reduce((acc, user) => acc += Number(user.balance.replace(/[$,]/g, '')), 0);
   return allBal.toFixed(2);
 }
