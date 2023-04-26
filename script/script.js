@@ -2,7 +2,7 @@
 
 (function () {
     
-    let ladder = {
+    const ladder = {
         step: 0,
         up: function() {
             this.step++;
@@ -14,7 +14,7 @@
         },
         showStep: function() { 
             alert(this.step);
-            return this;
+            return this.step;
         }
     };
 
