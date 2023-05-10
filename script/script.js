@@ -7,7 +7,7 @@ void function () {
     const generateList = (array) => {
         const ul = document.createElement('ul');
 
-        array.map((item) => {
+        array.forEach((item) => {
             const li = document.createElement('li');
 
             if (Array.isArray(item)) {
