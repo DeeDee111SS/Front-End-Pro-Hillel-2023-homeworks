@@ -1,0 +1,29 @@
+На данный момент git видит что мы добавили файлы в папку но не следит за ними.
+
+Представим что у нас есть папка проекта
+
+project-folder
+    - Readme.md
+    - People.md
+
+Сейчас эти файлы в статусе untracked, нужно это исправить.
+
+Используем команду git add <путь к файлу>:
+
+> git add Readme.md
+
+и сразу проверяем git status
+
+> git status
+
+получаем сообщение:
+
+> Changes to be committed:
+    (use "git rm --cached <file>..." to unstage)
+        new file:   Readme.md
+
+    Untracked files:
+        (use "git add <file>..." to include in what will be committed)
+            People.md
+
+Окей теперь git следит за файлом Readme.md и ждет пока мы его закомитим

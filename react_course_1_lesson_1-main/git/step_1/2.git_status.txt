@@ -1,0 +1,26 @@
+C помощью команды git status можно посмотреть статус репозитория.
+
+Находясь внутри проекта в котором мы выполнили git init и инициализировали
+репозиторий выполняем команду git status.
+
+> git status
+
+и получаем сообщение похожее на это
+
+> On branch main  // (или master)
+> No commits yet
+> nothing to commit (create/copy files and use "git add" to track)
+
+В этом выводе указано, что репозиторий пустой (No commits yet) и в него нечего
+добавить, так как нет новых или изменённых файлов. Нужно добавить файлы.
+
+После того как мы добавим файлы и выполнили git status мы получим сообщение
+
+> untracked files:
+      (use "git add <file>..." to include in what will be committed)
+        PEOPLE.md
+        README.md
+
+
+Git видит что мы создали файлы и говорит на что мы можем их
+добавить для отслеживания
