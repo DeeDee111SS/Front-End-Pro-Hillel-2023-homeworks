@@ -2,11 +2,16 @@
 
 void function () {
     
-    const form = document.getElementById('form');
+    const form = document.querySelector('#form');
+    const inputs = form.querySelectorAll('input, textarea, select');
+
     form.addEventListener('submit', (event) => {
         event.preventDefault(); 
-        const formData = new FormData(form); 
-        const data = Object.fromEntries(formData.entries()); 
+        event.stopPropagation();
+        
+        const data = {};
+        inputs.forEach(({ name, value }) => data[name] = value);
+
         console.log(data); 
     });
     
