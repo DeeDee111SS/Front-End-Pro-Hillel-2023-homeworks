@@ -1,15 +1,63 @@
-@media (min-width: 768px) {
+// @media (min-width: 768px) {
+//     .aside {
+
+//         &__container {
+//             display: flex;
+//             flex-direction: column;
+//         }
+//     }
+// }
+
+@media (min-width: 1201px) {
     .aside {
+        flex: 1;
+        flex-basis: 20%;
+        display: flex;
+        flex-direction: column;
 
         &__container {
             display: flex;
             flex-direction: column;
+            // justify-content: space-between;
         }
-    }
-}
 
-@media (min-width: 1201px) {
-    .aside {
-        
+        &__title{
+            font-family: 'Sofia Pro';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 47px;
+            color: $colorBasicBlack;
+            margin: 10px 0 44px;
+        }
+
+        &__nav-list-item {
+            padding-bottom: 25px;
+        }
+
+        &__nav-list-link {
+            font-family: 'Sofia Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;        
+            color: $colorBasicBlack;
+            padding-left: 10px;
+        }
+
+        .help-center {
+            display: flex;
+            margin: auto 0 20px;
+
+            &__link {
+                font-family: 'Sofia Pro';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;            
+                color: $colorBasicBlack;
+                padding-left: 35px;
+            }
+        }
     }
 }

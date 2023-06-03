@@ -230,7 +230,7 @@ sometimes even 376 */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 50px;
+  margin: 50px 0 47px;
 }
 .header__button-wrap {
   display: flex;
@@ -289,6 +289,26 @@ sometimes even 376 */
 .header .search-form__button {
   background-image: url(../img/search.svg);
 }
+.header .search-form__input {
+  background-color: transparent;
+  border: transparent;
+  height: 32px;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  color: #000000;
+}
+.header .search-form__input::placeholder {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  color: #000000;
+  opacity: 0.2;
+}
 .header__mobile-nav-list {
   display: flex;
   flex-direction: column;
@@ -341,9 +361,6 @@ sometimes even 376 */
   .header .menu-btn {
     display: none;
   }
-  .header .aside-menu-btn {
-    display: none;
-  }
   .header__nav-list {
     display: flex;
     padding-left: 0;
@@ -371,6 +388,11 @@ sometimes even 376 */
   }
   .header__nav-list-item:not(:last-child) {
     margin-right: 15px;
+  }
+}
+@media (min-width: 1201px) {
+  .header .aside-menu-btn {
+    display: none;
   }
 }
 .aside__mobile-container {
@@ -420,11 +442,54 @@ sometimes even 376 */
 .aside__container {
   display: none;
 }
+.aside .help-center {
+  display: none;
+}
 
-@media (min-width: 768px) {
+@media (min-width: 1201px) {
+  .aside {
+    flex: 1;
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+  }
   .aside__container {
     display: flex;
     flex-direction: column;
+  }
+  .aside__title {
+    font-family: "Sofia Pro";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 47px;
+    color: #000000;
+    margin: 10px 0 44px;
+  }
+  .aside__nav-list-item {
+    padding-bottom: 25px;
+  }
+  .aside__nav-list-link {
+    font-family: "Sofia Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    padding-left: 10px;
+  }
+  .aside .help-center {
+    display: flex;
+    margin: auto 0 20px;
+  }
+  .aside .help-center__link {
+    font-family: "Sofia Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    padding-left: 35px;
   }
 }
 .main-grid {
@@ -476,11 +541,24 @@ sometimes even 376 */
   background-image: url(../img/grey-min.jpg);
 }
 
+@media (min-width: 768px) {
+  .main-content {
+    flex: 1;
+    flex-basis: 80%;
+  }
+}
 /*
 1201 
 992 
 768 
 576
 */
+@media (min-width: 1201px) {
+  .main-flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 65px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

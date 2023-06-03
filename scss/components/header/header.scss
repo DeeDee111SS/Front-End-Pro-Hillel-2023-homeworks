@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 50px;
+    margin: 50px 0 47px;
 
     // .logo { }
 
@@ -64,6 +64,28 @@
 
         &__button {
             background-image: url(../img/search.svg);
+        }
+
+        &__input {
+            background-color: transparent;
+            border: transparent;
+            height: 32px;
+            font-family: 'Circular Std';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 22px;
+            color: $colorBasicBlack;
+
+            &::placeholder {
+                font-family: 'Circular Std';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 22px;
+                color: $colorBasicBlack;
+                opacity: 0.2;
+            }
         }
     }    
 
