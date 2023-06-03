@@ -1,0 +1,15 @@
+@media (min-width: 768px) {
+    .aside {
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (min-width: 1201px) {
+    .aside {
+        
+    }
+}

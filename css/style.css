@@ -1,0 +1,486 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.body {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  min-width: 375px;
+}
+
+.container {
+  max-width: 1320px;
+  min-width: 375px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container--pb-adapt {
+  padding: 0 30px;
+}
+.container--mid-content {
+  max-width: 1080px;
+}
+.container.container--clients-max {
+  max-width: 1720px;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-object-fit {
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.stop-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 60px;
+  }
+  .container--pb-adapt {
+    padding: 0 60px;
+  }
+}
+@media (min-width: 1401px) {
+  .container {
+    padding: 0;
+  }
+  .container--pb-adapt {
+    padding: 0;
+  }
+}
+@media (min-width: 1721px) {
+  .container {
+    max-width: 1328px;
+  }
+}
+/* MF 
+1401
+1201
+992
+768
+576
+481
+sometimes even 376 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+.header__button-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.header .menu-btn,
+.header .aside-menu-btn,
+.header .basket-btn,
+.header .userlog-btn,
+.header .search-form__button {
+  background-color: #FFFFFF;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 8px;
+  transition-duration: 300ms;
+  transition-property: background-color;
+}
+.header .menu-btn:hover,
+.header .aside-menu-btn:hover,
+.header .basket-btn:hover,
+.header .userlog-btn:hover,
+.header .search-form__button:hover {
+  cursor: pointer;
+  background-color: #e6e6f0;
+}
+.header .menu-btn.show,
+.header .aside-menu-btn.show,
+.header .basket-btn.show,
+.header .userlog-btn.show,
+.header .search-form__button.show {
+  background-image: url(../img/close-btn.svg);
+}
+.header .menu-btn {
+  background-image: url(../img/menu-hamburger.svg);
+}
+.header .aside-menu-btn {
+  background-image: url(../img/menu-three-dots.svg);
+}
+.header .basket-btn {
+  background-image: url(../img/basket.svg);
+}
+.header .userlog-btn {
+  background-image: url(../img/person.svg);
+}
+.header .search-form {
+  display: flex;
+}
+.header .search-form__content {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.header .search-form__button {
+  background-image: url(../img/search.svg);
+}
+.header__mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 15px 15px;
+  list-style: none;
+  width: 100%;
+  right: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  position: fixed;
+  transform: translateX(104%);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 0 0 8px 8px;
+}
+.header__mobile-nav-list.show {
+  transform: translateX(0);
+}
+.header__mobile-nav-list-item {
+  width: 100%;
+  display: flex;
+}
+.header__mobile-nav-list-item:not(:last-child) {
+  padding-bottom: 15px;
+}
+.header__mobile-link {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #24a3ff;
+  width: 100%;
+  padding: 7px 0px;
+  background-color: #f5f5fa;
+  border-radius: 12px;
+  transition-duration: 300ms;
+  transition-property: background-color;
+}
+.header__mobile-link:hover {
+  background-color: #e6e6f0;
+}
+.header__mobile-link.active {
+  color: #f0145a;
+}
+.header__nav-list {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header .menu-btn {
+    display: none;
+  }
+  .header .aside-menu-btn {
+    display: none;
+  }
+  .header__nav-list {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+  }
+  .header__nav-list-item .header__link {
+    font-family: "Circular Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: right;
+    color: #000000;
+    padding-bottom: 7px;
+    border-bottom: 2px solid transparent;
+    transition-duration: 300ms;
+    transition-property: border-bottom-color;
+  }
+  .header__nav-list-item .header__link.active {
+    color: #f0145a;
+    border-bottom-color: #000000;
+  }
+  .header__nav-list-item .header__link:not(.active):hover {
+    border-bottom-color: #000000;
+  }
+  .header__nav-list-item:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+.aside__mobile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 15px 15px;
+  list-style: none;
+  width: 100%;
+  right: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  position: fixed;
+  transform: translateX(-104%);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 0 0 8px 8px;
+}
+.aside__mobile-container.show {
+  transform: translateX(0);
+}
+.aside__mobile-container-item {
+  width: 100%;
+  display: flex;
+}
+.aside__mobile-container-item:not(:last-child) {
+  padding-bottom: 15px;
+}
+.aside__mobile-link {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #24a3ff;
+  width: 100%;
+  padding: 7px 0px;
+  background-color: #f5f5fa;
+  border-radius: 12px;
+  transition-duration: 300ms;
+  transition-property: background-color;
+}
+.aside__mobile-link:hover {
+  background-color: #e6e6f0;
+}
+.aside__mobile-link.active {
+  color: #f0145a;
+}
+.aside__container {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .aside__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.main-grid {
+  display: flex;
+  flex-direction: column;
+}
+.main-grid__article {
+  width: 100%;
+  height: 200px;
+  display: flex;
+}
+.main-grid__article--c1, .main-grid__article--c4 {
+  flex-direction: column;
+}
+.main-grid__article--c2, .main-grid__article--c3 {
+  flex-direction: row;
+}
+.main-grid__article-item {
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+.main-grid__article-item--c1a {
+  background-image: url(../img/get-up-to.svg);
+  background-color: #BCE7F0;
+}
+.main-grid__article-item--c1b {
+  background-image: url(../img/summer.svg);
+}
+.main-grid__article-item--c2a {
+  background-image: url(../img/violet-min.jpg);
+}
+.main-grid__article-item--c2b {
+  background-image: url(../img/blue-min.jpg);
+}
+.main-grid__article-item--c3a {
+  background-image: url(../img/pink-min.jpg);
+}
+.main-grid__article-item--c3b {
+  background-image: url(../img/turquoise-min.jpg);
+}
+.main-grid__article-item--c4a {
+  background-image: url(../img/yellow-min.jpg);
+}
+.main-grid__article-item--c4b {
+  background-image: url(../img/grey-min.jpg);
+}
+
+/*
+1201 
+992 
+768 
+576
+*/
+
+/*# sourceMappingURL=style.css.map */

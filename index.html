@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="fonts/circular-std-medium.woff" as="font" type="font/woff"
+        crossorigin="anonymous">
+    <link rel="preload" href="fonts/circular-std-medium.woff2" as="font" type="font/woff"
+        crossorigin="anonymous">
+    <link rel="preload" href="fonts/sofia-pro-medium.woff" as="font" type="font/woff"
+        crossorigin="anonymous">
+    <link rel="preload" href="fonts/sofia-pro-medium.woff2" as="font" type="font/woff"
+        crossorigin="anonymous">
+    <link rel="preload" href="fonts/sofia-pro-bold.woff" as="font" type="font/woff" 
+        crossorigin="anonymous">
+    <link rel="preload" href="fonts/sofia-pro-bold.woff2" as="font" type="font/woff" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Caped</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body class="body">
+    <div class="container">
+
+        <header class="header">
+            <img class="logo img-responsive" src="img/logo.svg" alt="logo">
+            <form class="search-form">
+                <div class="search-form__content">
+                    <button class="search-form__button" type="button" aria-label="search form button"></button>
+                    <input class="search-form__input" type="search" id="searchStore" name="q" placeholder="Search store"/>                
+                </div>
+            </form>
+            <nav class="header__nav">                
+                <menu class="header__mobile-nav-list">
+                    <li class="header__mobile-nav-list-item"><a class="header__mobile-link" href="#">products</a></li>
+                    <li class="header__mobile-nav-list-item"><a class="header__mobile-link" href="#">story</a></li>
+                    <li class="header__mobile-nav-list-item"><a class="header__mobile-link" href="#">manufacturing</a></li>
+                    <li class="header__mobile-nav-list-item"><a class="header__mobile-link" href="#">packaging</a></li>
+                </menu>
+                <menu class="header__nav-list">
+                    <li class="header__nav-list-item"><a class="header__link" href="#">products</a></li>
+                    <li class="header__nav-list-item"><a class="header__link" href="#">story</a></li>
+                    <li class="header__nav-list-item"><a class="header__link" href="#">manufacturing</a></li>
+                    <li class="header__nav-list-item"><a class="header__link" href="#">packaging</a></li>
+                </menu>
+            </nav>
+            <div class="header__button-wrap">
+                <button class="basket-btn" type="button" aria-label="basket menu button"></button>
+                <button class="userlog-btn" type="button" aria-label="user login menu button"></button>
+                <button class="aside-menu-btn" type="button" aria-label="open/close aside menu button"></button>
+                <button class="menu-btn" type="button" aria-label="open/close menu button"></button>
+            </div>
+        </header>
+
+        <aside class="aside">
+            <nav class="aside__mobile-container">
+                <h2 class="aside__mobile-title">Explore</h2>
+                <menu class="aside__mobile-nav-list">
+                    <li class="aside__mobile-nav-list-item"><img src="img/new-in-min.png" alt="new-in"><a class="aside__mobile-link" href="#">New In</a></li>
+                    <li class="aside__mobile-nav-list-item"><img src="img/clothing-min.png" alt="clothing"><a class="aside__mobile-link" href="#">Clothing</a></li>
+                    <li class="aside__mobile-nav-list-item"><img src="img/shoes-min.png" alt="shoes"><a class="aside__mobile-link" href="#">Shoes</a></li>
+                    <li class="aside__mobile-nav-list-item"><img src="img/accessories-min.png" alt="accessories"><a class="aside__mobile-link" href="#">Accessories</a></li>
+                    <li class="aside__mobile-nav-list-item"><img src="img/activewear-min.png" alt="activewear"><a class="aside__mobile-link" href="#">Activewear</a></li>
+                    <li class="aside__mobile-nav-list-item"><img src="img/gifts-min.png" alt="gifts-and-living"><a class="aside__mobile-link" href="#">Gifts & Living</a></li>
+                    <li class="aside__mobile-nav-list-item"><img src="img/inspiration-min.png" alt="inspiration"><a class="aside__mobile-link" href="#">Inspiration</a></li>
+                </menu>
+                <div class="help-center-mobile">
+                    <img src="img/help.svg" alt="help-center">
+                    <a class="help-center__mobile-link" href="#">Help Center</a>
+                </div>
+            </nav>
+            <nav class="aside__container">
+                <h2 class="aside__title">Explore</h2>
+                <menu class="aside__nav-list">
+                    <li class="aside__nav-list-item"><img src="img/new-in-min.png" alt="new-in"><a href="#">New In</a></li>
+                    <li class="aside__nav-list-item"><img src="img/clothing-min.png" alt="clothing"><a href="#">Clothing</a></li>
+                    <li class="aside__nav-list-item"><img src="img/shoes-min.png" alt="shoes"><a href="#">Shoes</a></li>
+                    <li class="aside__nav-list-item"><img src="img/accessories-min.png" alt="accessories"><a href="#">Accessories</a></li>
+                    <li class="aside__nav-list-item"><img src="img/activewear-min.png" alt="activewear"><a href="#">Activewear</a></li>
+                    <li class="aside__nav-list-item"><img src="img/gifts-min.png" alt="gifts-and-living"><a href="#">Gifts & Living</a></li>
+                    <li class="aside__nav-list-item"><img src="img/inspiration-min.png" alt="inspiration"><a href="#">Inspiration</a></li>
+                </menu>
+                <div class="help-center">
+                    <img src="img/help.svg" alt="help-center">
+                    <a class="help-center__link" href="#">Help Center</a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1 class="visually-hidden">grid</h1>
+            <section class="main-grid">
+                <article class="main-grid__article main-grid__article--c1">
+                    <h2 class="visually-hidden">c1</h2>
+                    <div class="main-grid__article-item main-grid__article-item--c1a">
+                        <h3 class="visually-hidden">GET UP TO 50% OFF</h3>
+                        <p>GET UP TO 50% OFF</p>
+                    </div>
+                    <div class="main-grid__article-item main-grid__article-item--c1b">
+                        <h3 class="visually-hidden">Hello summer 50% OFF</h3>
+                    </div>
+                </article>
+                <article class="main-grid__article main-grid__article--c2">
+                    <h2 class="visually-hidden">c2</h2>
+                    <div class="main-grid__article-item main-grid__article-item--c2a">
+                        <h3 class="visually-hidden"></h3>
+                        <!-- <img src="" alt=""> -->
+                    </div>
+                    <div class="main-grid__article-item main-grid__article-item--c2b">
+                        <h3 class="visually-hidden"></h3>
+                        <!-- <img src="" alt=""> -->
+                    </div>
+                </article>
+                <article class="main-grid__article main-grid__article--c3">
+                    <h2 class="visually-hidden">c3</h2>
+                    <div class="main-grid__article-item main-grid__article-item--c3a">
+                        <h3 class="visually-hidden"></h3>
+                        <!-- <img src="" alt=""> -->
+                    </div>
+                    <div class="main-grid__article-item main-grid__article-item--c3b">
+                        <h3 class="visually-hidden"></h3>
+                        <!-- <img src="" alt=""> -->
+                    </div>
+                </article>
+                <article class="main-grid__article main-grid__article--c4">
+                    <h2 class="visually-hidden">c4</h2>
+                    <div class="main-grid__article-item main-grid__article-item--c4a">
+                        <h3>Trending & Hot</h3>
+                        <p>A collection of most trending items.</p>
+                        <!-- <img src="" alt=""> -->
+                    </div>
+                    <div class="main-grid__article-item main-grid__article-item--c4b">
+                        <h3>Buy it for the first time</h3>
+                        <p>New in store. Try it before anyone else.</p>
+                        <!-- <img src="" alt=""> -->
+                    </div>
+                </article>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- <script src="script/script.js"></script> -->
+</body>
+
+</html>
