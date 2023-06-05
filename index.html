@@ -27,32 +27,38 @@
     <div class="container">
 
         <header class="header">
-            <img class="logo img-responsive" src="img/logo.svg" alt="logo">
-            <form class="search-form">
-                <label class="search-form__content">
-                    <button class="search-form__button" type="button" aria-label="search form button"></button>
-                    <input class="search-form__input" type="search" id="searchStore" name="q" placeholder="Search store"/>                
-                </label>
-            </form>
-            <nav class="header__nav">                
-                <menu class="header__mobile-nav-list">
-                    <li class="header__mobile-nav-list-item"><a class="header__mobile-link" href="#">products</a></li>
-                    <li class="header__mobile-nav-list-item"><a class="header__mobile-link" href="#">story</a></li>
-                    <li class="header__mobile-nav-list-item"><a class="header__mobile-link" href="#">manufacturing</a></li>
-                    <li class="header__mobile-nav-list-item"><a class="header__mobile-link" href="#">packaging</a></li>
-                </menu>
-                <menu class="header__nav-list">
-                    <li class="header__nav-list-item"><a class="header__link" href="#">products</a></li>
-                    <li class="header__nav-list-item"><a class="header__link" href="#">story</a></li>
-                    <li class="header__nav-list-item"><a class="header__link" href="#">manufacturing</a></li>
-                    <li class="header__nav-list-item"><a class="header__link" href="#">packaging</a></li>
-                </menu>
-            </nav>
-            <div class="header__button-wrap">
-                <button class="basket-btn" type="button" aria-label="basket menu button"></button>
-                <button class="userlog-btn" type="button" aria-label="user login menu button"></button>
-                <button class="aside-menu-btn" type="button" aria-label="open/close aside menu button"></button>
-                <button class="menu-btn" type="button" aria-label="open/close menu button"></button>
+            <div class="header__logo-wrap">
+                <a class="logo-link" href="#">
+                    <img class="logo" src="img/logo.svg" alt="logo">
+                </a> 
+            </div>  
+            <div class="header__top-line">          
+                <form class="search-form">
+                    <label class="search-form__content">
+                        <button class="search-form__button" type="button" aria-label="search form button"></button>
+                        <input class="search-form__input" type="search" id="searchStore" name="q" placeholder="Search store"/>                
+                    </label>
+                </form>
+                <nav class="header__nav">                
+                    <menu class="header__mobile-nav-list">
+                        <li class="header__mobile-nav-list-item"><a class="header__mobile-link" href="#">products</a></li>
+                        <li class="header__mobile-nav-list-item"><a class="header__mobile-link" href="#">story</a></li>
+                        <li class="header__mobile-nav-list-item"><a class="header__mobile-link" href="#">manufacturing</a></li>
+                        <li class="header__mobile-nav-list-item"><a class="header__mobile-link" href="#">packaging</a></li>
+                    </menu>
+                    <menu class="header__nav-list">
+                        <li class="header__nav-list-item"><a class="header__nav-link" href="#">products</a></li>
+                        <li class="header__nav-list-item"><a class="header__nav-link" href="#">story</a></li>
+                        <li class="header__nav-list-item"><a class="header__nav-link" href="#">manufacturing</a></li>
+                        <li class="header__nav-list-item"><a class="header__nav-link" href="#">packaging</a></li>
+                    </menu>
+                </nav>
+                <div class="header__button-wrap">
+                    <button class="basket-btn" type="button" aria-label="basket menu button"></button>
+                    <button class="userlog-btn" type="button" aria-label="user login menu button"></button>
+                    <button class="aside-menu-btn" type="button" aria-label="open/close aside menu button"></button>
+                    <button class="menu-btn" type="button" aria-label="open/close menu button"></button>
+                </div>
             </div>
         </header>
 
@@ -122,48 +128,46 @@
                 <section class="main-grid">
                     <article class="main-grid__article main-grid__article--c1">
                         <h2 class="visually-hidden">c1</h2>
-                        <div class="main-grid__article-item main-grid__article-item--c1a">
+                        <a href="#" class="main-grid__article-item main-grid__article-item--c1a">
                             <h3 class="visually-hidden">GET UP TO 50% OFF</h3>
-                            <p>GET UP TO 50% OFF</p>
-                        </div>
-                        <div class="main-grid__article-item main-grid__article-item--c1b">
+                            <p class="main-grid__article-text main-grid__article-text--c1a">GET UP TO 50% OFF</p>
+                        </a>
+                        <a href="#" class="main-grid__article-item main-grid__article-item--c1b">
                             <h3 class="visually-hidden">Hello summer 50% OFF</h3>
-                        </div>
+                        </a>
                     </article>
                     <article class="main-grid__article main-grid__article--c2">
                         <h2 class="visually-hidden">c2</h2>
-                        <div class="main-grid__article-item main-grid__article-item--c2a">
-                            <h3 class="visually-hidden"></h3>
-                            <!-- <img src="" alt=""> -->
-                        </div>
-                        <div class="main-grid__article-item main-grid__article-item--c2b">
-                            <h3 class="visually-hidden"></h3>
-                            <!-- <img src="" alt=""> -->
-                        </div>
+                        <a href="#" class="main-grid__article-item main-grid__article-item--c2a">
+                            <h3 class="visually-hidden">c2a</h3>   
+                            <button class="like-btn" type="button" aria-label="like button"></button>
+                        </a>
+                        <a href="#" class="main-grid__article-item main-grid__article-item--c2b">
+                            <h3 class="visually-hidden">c2b</h3> 
+                            <button class="like-btn" type="button" aria-label="like button"></button>
+                        </a>
                     </article>
                     <article class="main-grid__article main-grid__article--c3">
                         <h2 class="visually-hidden">c3</h2>
-                        <div class="main-grid__article-item main-grid__article-item--c3a">
-                            <h3 class="visually-hidden"></h3>
-                            <!-- <img src="" alt=""> -->
-                        </div>
-                        <div class="main-grid__article-item main-grid__article-item--c3b">
-                            <h3 class="visually-hidden"></h3>
-                            <!-- <img src="" alt=""> -->
-                        </div>
+                        <a href="#" class="main-grid__article-item main-grid__article-item--c3a">
+                            <h3 class="visually-hidden">c3a</h3>   
+                            <button class="like-btn" type="button" aria-label="like button"></button>
+                        </a>
+                        <a href="#" class="main-grid__article-item main-grid__article-item--c3b">
+                            <h3 class="visually-hidden">c3b</h3>  
+                            <button class="like-btn" type="button" aria-label="like button"></button>
+                        </a>
                     </article>
                     <article class="main-grid__article main-grid__article--c4">
                         <h2 class="visually-hidden">c4</h2>
-                        <div class="main-grid__article-item main-grid__article-item--c4a">
-                            <h3>Trending & Hot</h3>
-                            <p>A collection of most trending items.</p>
-                            <!-- <img src="" alt=""> -->
-                        </div>
-                        <div class="main-grid__article-item main-grid__article-item--c4b">
-                            <h3>Buy it for the first time</h3>
-                            <p>New in store. Try it before anyone else.</p>
-                            <!-- <img src="" alt=""> -->
-                        </div>
+                        <a href="#" class="main-grid__article-item main-grid__article-item--c4a">
+                            <h3 class="main-grid__article-title main-grid__article-title--c4a">Trending & Hot</h3>
+                            <p class="main-grid__article-text">A collection of most trending items.</p>
+                        </a>
+                        <a href="#" class="main-grid__article-item main-grid__article-item--c4b">
+                            <h3 class="main-grid__article-title main-grid__article-title--c4b">Buy it for the first time</h3>
+                            <p class="main-grid__article-text">New in store. Try it before anyone else.</p>
+                        </a>
                     </article>
                 </section>
             </main>

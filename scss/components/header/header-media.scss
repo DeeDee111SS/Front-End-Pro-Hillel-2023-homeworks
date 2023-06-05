@@ -1,6 +1,45 @@
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     .header {
-        
+        &__logo-wrap {
+            flex: 1;
+            flex-basis: 20%;
+        }
+
+        &__top-line { 
+            justify-content: space-between;  
+            flex: 1;
+            flex-basis: 80%;
+        }
+
+        .search-form {
+            &__input {
+                width: auto;
+            }
+        }
+    }
+}
+
+@media (min-width: 880px) {
+    //custom breakpoint
+    .header {
+        .aside-menu-btn {
+            display: none;
+        }
+
+        .menu-btn,
+        .basket-btn,
+        .userlog-btn {
+            margin-left: 20px;
+        }
+
+        .search-form__button {
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .header {        
         .menu-btn {
             display: none;
         }       
@@ -9,48 +48,53 @@
             display: flex;  
             padding-left: 0;
             list-style: none;
-            // margin-top: 16px;
     
             &-item {
-                .header__link {
+                .header__nav-link {
                     font-family: 'Circular Std';
                     font-style: normal;
                     font-weight: 400;
                     font-size: 17px;
-                    line-height: 22px;                   
-                    
-                    
+                    line-height: 22px;    
                     text-align: right;
                     color: $colorBasicBlack;
                     padding-bottom: 7px;
                     border-bottom: 2px solid transparent;
                     transition-duration: 300ms;
                     transition-property: border-bottom-color;
+                    margin-left: 20px;
     
                     &.active {
-                        color: $colorAccent; // need smth else
+                        color: $colorAccent;
                         border-bottom-color: $colorBasicBlack;
                     }
     
                     &:not(.active):hover {
                         border-bottom-color: $colorBasicBlack;
-                    }
-    
+                    }    
                     
                 }
-            }
-    
-            &-item:not(:last-child) {
-                margin-right: 15px;
             }                
+        }
+
+        .search-form {
+            &__input {
+                width: 134px;
+            }
         }
     }
 }
 
 @media (min-width: 1201px) {
     .header {
-        .aside-menu-btn {
-            display: none;
+        .search-form {
+            &__input {
+                width: 134px;
+            }
+        }
+        
+        .header__nav-link {
+            margin-left: 42px;
         }
     }
 }

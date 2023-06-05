@@ -4,32 +4,54 @@
 
     &__article {
         width: 100%;
-        height: 200px;
+        height: 320px;
         display: flex; 
-        // background-clip: inherit;
 
-        &--c1,
-        &--c4 {
-            flex-direction: column;
+        &:not(:last-child) {
+            margin-bottom: 20px;
         }
 
-        &--c2,
+        &--c1 {
+            flex-direction: column;            
+        }
+
+        &--c2 {
+            flex-direction: row;
+        }
+
         &--c3 {
             flex-direction: row;
         }
+
+        &--c4 {
+            flex-direction: column;
+        }        
     }
 
     &__article-item {
         width: 100%;
-        height: 200px;
+        height: 320px;
         background-repeat: no-repeat;        
         background-size: cover;
         background-position: center;
         border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid transparent;
+        transition-duration: 300ms;
+        transition-property: border-color;
+
+        &:hover {
+            cursor: pointer;
+            border-color: $colorBasicBlack;
+        }       
 
         &--c1a{
             background-image: url(../img/get-up-to.svg);
             background-color: $colorSectionLightBlue;
+            margin-bottom: 20px;  
+            align-items: center;
         }
 
         &--c1b {
@@ -38,26 +60,95 @@
 
         &--c2a {
             background-image: url(../img/violet-min.jpg);
+            margin-right: 20px;
+            display: flex;
+            justify-content: start;
+            align-items: flex-end;
         }
 
         &--c2b {
             background-image: url(../img/blue-min.jpg);
+            display: flex;
+            justify-content: start;
+            align-items: flex-end;
         }
 
         &--c3a {
             background-image: url(../img/pink-min.jpg);
+            margin-right: 20px;
+            display: flex;
+            justify-content: start;
+            align-items: flex-end;
         }
 
         &--c3b {
             background-image: url(../img/turquoise-min.jpg);
+            display: flex;
+            justify-content: start;
+            align-items: flex-end;
         }
 
         &--c4a {
             background-image: url(../img/yellow-min.jpg);
+            margin-bottom: 20px;
         }
 
         &--c4b {
             background-image: url(../img/grey-min.jpg);
+        }
+    }
+
+    &__article-title {
+        font-family: 'Sofia Pro';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 40px;
+        margin-left: 30px;
+
+        &--c4a {
+            color: $colorSectionDarkBlue;
+        }
+
+        &--c4b {
+            color: $colorSectionOrange;
+        }
+    }
+
+    &__article-text {
+        font-family: 'Sofia Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 23px;    
+        color: $colorBasicBlack;
+        margin-left: 30px;
+
+  
+        &--c1a {
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 47px;
+            margin: 0;
+        }
+    }
+
+    .like-btn {
+        background-color: $colorBasicWhite;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 38px;
+        height: 38px;
+        border: 0;
+        border-radius: 50%;
+        transition-duration: 300ms;
+        transition-property: background-color;
+        background-image: url(../img/heart.svg);
+        margin: 20px;
+    
+        &:hover {
+            cursor: pointer;
+            background-color: $colorGreyHover;
         }
     }
 }

@@ -4,30 +4,17 @@
 }
 
 .body {
-    font-family: "Montserrat", "Arial", sans-serif;
+    font-family: "Arial", sans-serif;
     font-style: normal;
     font-weight: 500;
     min-width: 375px;
 }
 
 .container {
-    max-width: 1320px;
-    min-width: 375px;
+    max-width: 1328px;
+    min-width: 480px;
     margin: 0 auto;
     padding: 0 15px;
-
-    &--pb-adapt {
-        padding: 0 30px;
-    }
-
-    &--mid-content {
-        max-width: 1080px;
-    }
-
-    &.container--clients-max {
-        max-width: 1720px; // max-width: 1401px;
-        padding: 0;
-    }
 }
 
 .visually-hidden {
@@ -46,26 +33,13 @@
     height: auto;
 }
 
-.img-object-fit {
-    // height: <given>;
-    width: 100%;
-    object-fit: cover;
-}
-
 a {
     text-decoration: none;
 }
 
 html {
     scroll-behavior: smooth;
-    // overflow-y: scroll; // scrollbar is always visible
-    // or --  html {
-    //     margin-left: calc(100vw - 100%);
-    //     margin-right: 0;
-    // }
 }
-
-
 
 .stop-scroll {
     overflow: hidden;
@@ -75,35 +49,17 @@ html {
 @media (min-width: 768px) {
     .container {
         padding: 0 60px;
-
-        &--pb-adapt {
-            padding: 0 60px;
-        }
     }
 }
 
 @media (min-width: 1401px) {
     .container {
         padding: 0;
-
-        &--pb-adapt {
-            padding: 0;
-        }
     }
 }
 
 @media (min-width: 1721px) {
     .container {
-        max-width: 1328px; // max-width: 1328px; - my layout
+        max-width: 1328px;
     }
 }
-
-
-/* MF 
-1401
-1201
-992
-768
-576
-481
-sometimes even 376 */

@@ -1,14 +1,5 @@
-// @media (min-width: 768px) {
-//     .aside {
-
-//         &__container {
-//             display: flex;
-//             flex-direction: column;
-//         }
-//     }
-// }
-
-@media (min-width: 1201px) {
+@media (min-width: 880px) {
+    //custom breakpoint
     .aside {
         flex: 1;
         flex-basis: 20%;
@@ -18,7 +9,6 @@
         &__container {
             display: flex;
             flex-direction: column;
-            // justify-content: space-between;
         }
 
         &__title{
@@ -32,7 +22,9 @@
         }
 
         &__nav-list-item {
-            padding-bottom: 25px;
+            padding-bottom: 11px;
+            display: flex;
+            align-items: center;
         }
 
         &__nav-list-link {
@@ -42,7 +34,15 @@
             font-size: 16px;
             line-height: 24px;        
             color: $colorBasicBlack;
-            padding-left: 10px;
+            margin-left: 12px;
+            padding: 7px 0;
+            border-bottom: 2px solid transparent;
+            transition-duration: 300ms;
+            transition-property: border-bottom-color;
+
+            &:hover {
+                border-bottom-color: $colorBasicBlack;                    
+            }
         }
 
         .help-center {
@@ -56,7 +56,15 @@
                 font-size: 16px;
                 line-height: 24px;            
                 color: $colorBasicBlack;
-                padding-left: 35px;
+                margin-left: 35px;
+                padding: 20px 0 7px;
+                border-bottom: 2px solid transparent;
+                transition-duration: 300ms;
+                transition-property: border-bottom-color;
+            
+                &:hover {
+                    border-bottom-color: $colorBasicBlack;
+                }
             }
         }
     }
