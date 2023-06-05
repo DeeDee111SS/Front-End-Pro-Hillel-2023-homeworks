@@ -68,14 +68,10 @@
         background-image: url(../img/person.svg);
     }
 
-    .search-form {
+    .search-form {   
         display: flex;
-
-        &__content {
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: flex-start;
-        }
+        flex-wrap: nowrap;
+        align-items: flex-start;        
 
         &__button {
             background-image: url(../img/search.svg);

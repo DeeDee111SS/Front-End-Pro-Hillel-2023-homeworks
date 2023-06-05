@@ -39,7 +39,7 @@
             height: 380px;
             width: calc(50% - 10px);
             
-            &:nth-child(odd) {
+            &:nth-child(even) {
                 margin-right: 20px;
             }
 
