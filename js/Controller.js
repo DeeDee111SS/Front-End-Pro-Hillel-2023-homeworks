@@ -20,7 +20,6 @@ const Controller = {
         })
         const savedTodoItem = Model.postData(data);
         View.renderItem(savedTodoItem);
-        this.form.reset();
     },
 
     prerenderTodos() {
@@ -29,11 +28,12 @@ const Controller = {
     },
 
     removeHandler(event) {
-        event.stopPropagation();
-        if (!event.target.closest('.delete-button')) return;
-        const todoId = event.target.getAttribute('data-id');
+        event.stopPropagation();        
+        const deleteButton = event.target.closest('.delete-button');
+        if (!deleteButton) return;
+        const todoId = Number(deleteButton.getAttribute('data-id'));
         Model.removeDataById(todoId);
-        event.target.closest('.col-4').remove();
+        deleteButton.closest('.col-4').remove();
     },
 
     init(formSelector, blockSelector) {

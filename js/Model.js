@@ -31,9 +31,8 @@ const Model = {
     // will remove data from storage by id
     removeDataById(id) { 
         const savedData = this.getData();
-        if (id !== -1) {
-            savedData.splice(id, 1);
-        }
+        const index = savedData.findIndex(item => item.id === id)        
+        if (index !== -1) savedData.splice(index, 1);
         this.storage.setItem(this.dataKey, JSON.stringify(savedData));        
     },
 

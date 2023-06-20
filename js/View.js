@@ -6,6 +6,7 @@ const View = {
     renderItem(data) {
         const template = this.createTemplate(data);
         this.todoContainer.prepend(template);
+        Controller.form.reset();
     },
 
     createTemplate({title, description, id}) {
