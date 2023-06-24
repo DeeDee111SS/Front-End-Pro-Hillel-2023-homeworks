@@ -4,8 +4,8 @@ const pug = require('gulp-pug');
 const browserSync = require('browser-sync').create();
 
 const development = series(
-  parallel(buildSass, buildPug),
-  browserSyncJob
+    parallel(buildSass, buildPug),
+    browserSyncJob
 );
 
 const browserSyncJob = () => {
