@@ -27,15 +27,13 @@ void (function () {
 
     Student.prototype.summary = function () {
         const averageMark = this.averageProgress();
-        const averageAttendance = this.attendance.filter((value) => value === true).length / this.attendance.length;
+        const averageAttendance =
+            this.attendance.filter((value) => value === true).length /
+            this.attendance.length; // если оценок меньше 10, то логика не работает, не this.attendance.length, а чет другое
 
-        if (averageMark > 9 && averageAttendance > 0.9) {
-            return "Ути какой молодчинка!";
-        } else if (averageMark > 9 || averageAttendance > 0.9) {
-            return "Норм, но можно лучше";
-        } else {
-            return "Редиска!";
-        }
+        if (averageMark >= 9 && averageAttendance >= 0.9) return "Ути какой молодчинка!";
+        if (averageMark > 9 || averageAttendance > 0.9) return "Норм, но можно лучше";
+        if (averageMark < 9 && averageAttendance < 0.9) return "Редиска!";
     };
 
     Student.prototype.age = function () {
