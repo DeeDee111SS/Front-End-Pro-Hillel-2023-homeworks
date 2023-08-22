@@ -8,7 +8,7 @@
 
 1. Установите React
 2. Реализуйте компонент Card, возвращающий следующий jsx:  
-        ```html
+        ```
         <div className="card">
             <div className="card-body">
                 <h4 className="card-title">Card title</h4>
