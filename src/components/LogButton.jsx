@@ -54,7 +54,7 @@ class LogButton extends Component {
                         -
                     </button>
                 </div>
-                <div className="list-group">
+                <div className="list-group mt-2">
                     {log.map((item, index) => (
                         <button
                             key={index}
