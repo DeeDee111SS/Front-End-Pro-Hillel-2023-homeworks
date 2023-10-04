@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { addNote, removeNote, resetForm, clearNotes } from "../store/actions";
 import Item from './Item';
 import { v4 as uuidv4 } from 'uuid';
 
 const TodoBox = () => {
-    const [notes, setNotes] = useState([]);
-    const [titleInputValue, setTitleInputValue] = useState('');
-    const [taskInputValue, setTaskInputValue] = useState('');
+
+    const notes = useSelector((state) => state.notes);
+    const dispatch = useDispatch();
+    const [titleInputValue, setTitleInputValue] = useState("");
+    const [taskInputValue, setTaskInputValue] = useState("");
 
     const handleTitleInputChange = (event) => {
         setTitleInputValue(event.target.value);
@@ -17,31 +21,31 @@ const TodoBox = () => {
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        if (titleInputValue.trim() === '' || taskInputValue.trim() === '') return;
+        if (titleInputValue.trim() === "" || taskInputValue.trim() === "") return;
 
         const newNote = {
-            id: uuidv4(),
-            title: titleInputValue,
-            task: taskInputValue,
+        id: uuidv4(),
+        title: titleInputValue,
+        task: taskInputValue,
         };
-        const updatedNotes = [newNote, ...notes];
-        setNotes(updatedNotes);
-        setTitleInputValue('');
-        setTaskInputValue('');
+
+        dispatch(addNote(newNote));
+        setTitleInputValue("");
+        setTaskInputValue("");
     };
 
     const handleRemoveNote = (id) => {
-        const updatedNotes = notes.filter((note) => note.id !== id);
-        setNotes(updatedNotes);
+        dispatch(removeNote(id));
     };
 
     const handleFormReset = () => {
-        setTitleInputValue('');
-        setTaskInputValue('');
+        setTitleInputValue("");
+        setTaskInputValue("");
+        dispatch(resetForm());
     };
 
     const handleRemoveAllNotes = () => {
-        setNotes([]);
+        dispatch(clearNotes());
     };
 
     return (
