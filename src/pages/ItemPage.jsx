@@ -16,7 +16,7 @@ const ItemPage = () => {
 
   if (!note) {
     return <div>
-        <p>Заметка не найдена</p>
+        <p>Заметка удалена/не найдена</p>
         <Link to="/">
           <button type="button" class="btn btn-primary">Вернуться к списку</button>
         </Link>        
@@ -27,6 +27,10 @@ const ItemPage = () => {
     <div>
       <h2>{note.title}</h2>
       <p>{note.task}</p>
+      <label className="completed form-check">
+          <input data-item-id={note.id} type="checkbox" className="form-check-input"/>
+          <span>Завершено ?</span>
+      </label>
       <button 
         className="btn btn-danger delete-btn" 
         data-item-id={note.id} 

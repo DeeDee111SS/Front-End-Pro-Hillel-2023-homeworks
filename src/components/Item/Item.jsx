@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Item = ({ noteId, title, task, onRemove }) => {
     return (        
@@ -22,6 +23,13 @@ const Item = ({ noteId, title, task, onRemove }) => {
             </Link>
         </div>    
     );
+};
+
+Item.propTypes = {
+    noteId: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    task: PropTypes.string.isRequired,
+    onRemove: PropTypes.func.isRequired,
 };
 
 export default Item;

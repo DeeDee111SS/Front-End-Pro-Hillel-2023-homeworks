@@ -12,13 +12,6 @@ const TodoBox = () => {
     const [titleInputValue, setTitleInputValue] = useState("");
     const [taskInputValue, setTaskInputValue] = useState("");
 
-    // const btn1 = cn('btn btn-outline-primary left', {
-    //     active: mounted && active,
-    // })
-    // const btn2 = cn('btn btn-outline-primary right', {
-    //     active: mounted && !active,
-    // })
-
     const handleTitleInputChange = (event) => {
         setTitleInputValue(event.target.value);
     };
@@ -59,7 +52,6 @@ const TodoBox = () => {
     const uniqueId = () => {
         const date = new Date();
         const uniqueId = date.getTime();
-        console.log(uniqueId);
         return uniqueId;
     };
 
