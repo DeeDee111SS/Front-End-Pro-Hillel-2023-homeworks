@@ -1,49 +1,26 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from "react-redux";
-import { addNote, removeNote, resetForm, clearNotes } from "../../store/actions";
+import React from 'react';
+import { useDispatch } from "react-redux";
+import { addNote, resetForm, clearNotes } from "../../store/actions";
 // import { v4 as uuidv4 } from 'uuid';
 // import cn from 'classnames';
 import TaskRoutes from '../TaskRoutes';
+import { Formik, Form, Field } from 'formik';
 
 const TodoBox = () => {
-
-    // const notes = useSelector((state) => state.notes);
     const dispatch = useDispatch();
-    const [titleInputValue, setTitleInputValue] = useState("");
-    const [taskInputValue, setTaskInputValue] = useState("");
-
-    const handleTitleInputChange = (event) => {
-        setTitleInputValue(event.target.value);
-    };
-
-    const handleTaskInputChange = (event) => {
-        setTaskInputValue(event.target.value);
-    };
-
-    const handleFormSubmit = (event) => {
-        event.preventDefault();
-        if (titleInputValue.trim() === "" || taskInputValue.trim() === "") return;
-
+    const handleSubmit = (values, { resetForm }) => {
+        const { title, task } = values;
+        if (!title || !task) return;
+    
         const newNote = {
-            id: uniqueId(),
-            title: titleInputValue,
-            task: taskInputValue,
+          id: uniqueId(),
+          title,
+          task,
         };
-
+    
         dispatch(addNote(newNote));
-        setTitleInputValue("");
-        setTaskInputValue("");
-    };
-
-    // const handleRemoveNote = (id) => {
-    //     dispatch(removeNote(id));
-    // };
-
-    const handleFormReset = () => {
-        setTitleInputValue("");
-        setTaskInputValue("");
-        dispatch(resetForm());
-    };
+        resetForm();
+    };  
 
     const handleRemoveAllNotes = () => {
         dispatch(clearNotes());
@@ -61,54 +38,53 @@ const TodoBox = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-4">
-                        <form id="todoForm" onSubmit={handleFormSubmit} onReset={handleFormReset}>
-                            <div className="mb-3">
-                                <label className="form-label">Task title</label>
-                                <input
-                                    type="text"
-                                    name="title"
-                                    className="form-control"
-                                    placeholder="Title"
-                                    required=""
-                                    value={titleInputValue}
-                                    onChange={handleTitleInputChange}
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label className="form-label">Task body</label>
-                                <textarea
-                                    name="description"
-                                    className="form-control"
-                                    placeholder="Task body"
-                                    cols="30"
-                                    rows="10"
-                                    required=""
-                                    value={taskInputValue}
-                                    onChange={handleTaskInputChange}
-                                ></textarea>
-                            </div>
-                            <div className="d-flex justify-content-between">
-                                <div>
-                                    <input
-                                        type="submit"
-                                        className="btn btn-primary"
-                                        value="Create Task!"
-                                    />
-                                    <input
-                                        type="reset"
-                                        value="Очистить"
-                                        className="btn btn-warning"
+                        <Formik
+                            initialValues={{ title: '', task: '' }}
+                            onSubmit={handleSubmit}
+                            onReset={() => dispatch(resetForm())}
+                        >   
+                            <Form id="todoForm">
+                                <div className="mb-3">
+                                    <label className="form-label">Task title</label>
+                                    <Field
+                                        type="text"
+                                        name="title"
+                                        className="form-control"
+                                        placeholder="Title"
+                                        required
                                     />
                                 </div>
-                                <button
-                                    type="button"
-                                    className="btn btn-danger remove-all"
-                                    onClick={handleRemoveAllNotes}
-                                >
-                                    Удалить все
-                                </button>
-                            </div>
-                        </form>
+                                <div className="mb-3">
+                                    <label className="form-label">Task body</label>
+                                    <Field
+                                        as="textarea"
+                                        name="task"
+                                        className="form-control"
+                                        placeholder="Task body"
+                                        cols="30"
+                                        rows="10"
+                                        required
+                                    />
+                                </div>
+                                <div className="d-flex justify-content-between">
+                                    <div>
+                                        <button type="submit" className="btn btn-primary">
+                                        Create Task!
+                                        </button>
+                                        <button type="reset" className="btn btn-warning">
+                                        Очистить
+                                        </button>
+                                    </div>
+                                    <button
+                                        type="button"
+                                        className="btn btn-danger remove-all"
+                                        onClick={handleRemoveAllNotes}
+                                    >
+                                        Удалить все
+                                    </button>
+                                </div>
+                            </Form>
+                        </Formik>
                     </div>
 
                     <div className="col-8">
