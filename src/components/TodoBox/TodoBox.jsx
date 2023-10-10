@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { addNote, removeNote, resetForm, clearNotes } from "../store/actions";
-import Item from './Item';
-import { v4 as uuidv4 } from 'uuid';
+import { addNote, removeNote, resetForm, clearNotes } from "../../store/actions";
+// import { v4 as uuidv4 } from 'uuid';
+// import cn from 'classnames';
+import TaskRoutes from '../TaskRoutes';
 
 const TodoBox = () => {
 
-    const notes = useSelector((state) => state.notes);
+    // const notes = useSelector((state) => state.notes);
     const dispatch = useDispatch();
     const [titleInputValue, setTitleInputValue] = useState("");
     const [taskInputValue, setTaskInputValue] = useState("");
+
+    // const btn1 = cn('btn btn-outline-primary left', {
+    //     active: mounted && active,
+    // })
+    // const btn2 = cn('btn btn-outline-primary right', {
+    //     active: mounted && !active,
+    // })
 
     const handleTitleInputChange = (event) => {
         setTitleInputValue(event.target.value);
@@ -24,9 +32,9 @@ const TodoBox = () => {
         if (titleInputValue.trim() === "" || taskInputValue.trim() === "") return;
 
         const newNote = {
-        id: uuidv4(),
-        title: titleInputValue,
-        task: taskInputValue,
+            id: uniqueId(),
+            title: titleInputValue,
+            task: taskInputValue,
         };
 
         dispatch(addNote(newNote));
@@ -34,9 +42,9 @@ const TodoBox = () => {
         setTaskInputValue("");
     };
 
-    const handleRemoveNote = (id) => {
-        dispatch(removeNote(id));
-    };
+    // const handleRemoveNote = (id) => {
+    //     dispatch(removeNote(id));
+    // };
 
     const handleFormReset = () => {
         setTitleInputValue("");
@@ -46,6 +54,13 @@ const TodoBox = () => {
 
     const handleRemoveAllNotes = () => {
         dispatch(clearNotes());
+    };
+
+    const uniqueId = () => {
+        const date = new Date();
+        const uniqueId = date.getTime();
+        console.log(uniqueId);
+        return uniqueId;
     };
 
     return (
@@ -105,16 +120,7 @@ const TodoBox = () => {
                     </div>
 
                     <div className="col-8">
-                        <div className="row" id="todoItems">
-                            {notes.map((note) => (
-                                <Item
-                                    key={note.id}
-                                    title={note.title}
-                                    task={note.task}
-                                    onRemove={() => handleRemoveNote(note.id)}
-                                />
-                            ))}
-                        </div>
+                        <TaskRoutes/>
                     </div>
                 </div>
             </div>

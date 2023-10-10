@@ -4,13 +4,13 @@ export const RESET_FORM = "RESET_FORM";
 export const CLEAR_NOTES = "CLEAR_NOTES";
 
 export const addNote = (note) => ({
-  type: ADD_NOTE,
-  payload: note,
+    type: ADD_NOTE,
+    payload: note,
 });
 
 export const removeNote = (id) => ({
-  type: REMOVE_NOTE,
-  payload: id,
+    type: REMOVE_NOTE,
+    payload: id,
 });
 
 export const resetForm = () => ({
