@@ -11,7 +11,7 @@ const rootReducer = (state = initialState, action) => {
         case ADD_NOTE:
             return {
                 ...state,
-                notes: [...state.notes, action.payload],
+                notes: [action.payload, ...state.notes],
             };
         case REMOVE_NOTE:
             return {

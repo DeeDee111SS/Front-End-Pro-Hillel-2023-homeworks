@@ -5,3 +5,16 @@
     padding: 20px;
     margin-bottom: 20px;
 }
+
+.taskHeading {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.taskDescription {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
